@@ -1,0 +1,22 @@
+
+		h1 {
+			color: red; 
+			text-decoration: underline;
+
+		}
+		h2 {
+			Color: #00ff05;
+			text-decoration: overline;
+		}
+
+		body {
+			background-color: #FFFF00;
+			font-family: "papyrus", "century gothic", serif;
+		}
+
+		ul { list-style: square; }
+
+		#hawaii {
+			text-decoration: blink; 
+		}
+		
