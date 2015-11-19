@@ -1,0 +1,37 @@
+
+h1 {
+	font-size: 38px;
+}
+
+
+.intro {
+	background-color: #FF0000;
+	text-decoration: line-through; 
+}
+
+.first {
+	text-indent: 80px; 
+}
+.second {
+	text-align: right;
+}
+.third {
+	text-indent: 75px;
+}
+
+article {
+	font-size: 28px;
+}
+
+a {
+	font-size: 65px;
+	font-family: "papyrus", "century gothic", serif;
+
+}
+
+a:link  {  
+  text-decoration:none; 
+}  
+a:hover {
+   text-decoration: underline;
+}
