@@ -1,1 +1,58 @@
-box_model.css
+body {
+	font-weight: bold
+}
+
+#section_1 {
+	background-color: #D84231;
+	color: white;
+	height: 50px;
+	width: 150px;
+	padding: 10px;
+	border: 1px solid black;
+	margin: 0px 10px 10px 10px;
+}
+#section_2 {
+	background-color: #EAAE33;
+	color: white;
+	height: 50px;
+	width: 150px;
+	padding: 10px;
+	border: 1px solid black;
+	margin: 10px 10px 10px 30px;
+}
+#section_3 {
+	background-color: #FDF85D;
+	color: white;
+	height: 50px;
+	width: 150px;
+	padding: 10px;
+	border: 1px solid #000;
+	margin: 10px 10px 10px 60px;
+}
+#section_4 {
+	background-color: #578C05;
+	color: white;
+	height: 50px;
+	width: 150px;
+	padding: 10px;
+	border: 1px solid #000;
+	margin: 10px 10px 10px 90px;
+}
+#section_5 {
+	background-color: #234AFB;
+	color: white;
+	height: 50px;
+	width: 150px;
+	padding: 10px;
+	border: 1px solid #000;
+	margin: 10px 10px 10px 120px;	
+}
+#section_6 {
+	background-color: #DF8BF0;
+	color: white;
+	height: 50px;
+	width: 150px;
+	padding: 10px;
+	border: 1px solid #000;
+	margin: 10px 10px 10px 150px;
+}

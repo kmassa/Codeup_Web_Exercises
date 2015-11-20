@@ -1,4 +1,10 @@
 
+		
+		body{
+			background-image: url(/img/boys.jpg);
+			color: #FFF;
+		}
+
 		h1 {
 			color: red; 
 			text-decoration: underline;

@@ -4,13 +4,19 @@ h1 {
 }
 
 
-.intro {
+span {
 	background-color: #FF0000;
 	text-decoration: line-through; 
 }
 
 .first {
 	text-indent: 80px; 
+}
+.class {
+	text-indent: 80px;
+}
+ul {
+	list-style: none;
 }
 .second {
 	text-align: right;
