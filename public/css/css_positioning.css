@@ -13,8 +13,10 @@ html {
 }
 
 #container {
-
-	
+	margin: 50px;
+	width: 600px;
+	border: 1px solid #FFF;
+	padding: 10px;
 }
 
 .box {
@@ -30,6 +32,7 @@ html {
 #box_1 {
 	background-color: #D84231;
 	position: relative;
+	float: left;
 }
 #arrow_1 {
 	position: absolute;
@@ -39,6 +42,7 @@ html {
 #box_2 {
 	background-color: #EAAE33;
 	position: relative;
+	float: left;
 }
 #arrow_2 {
 	position: absolute;
@@ -49,6 +53,7 @@ html {
 #box_3 {
 	background-color: #FDF85D;
 	position: relative;
+	float: left;
 }
 #arrow_3 {
 	position: absolute;
@@ -59,6 +64,7 @@ html {
 #box_4 {
 	background-color: #578C05;
 	position: relative;
+	float:left;
 }
 #arrow_4 {
 	position: absolute;
@@ -69,6 +75,7 @@ html {
 #box_5 {
 	background-color: #234AFB;
 	position: relative;
+	float: left;
 }
 #arrow_5 {
 	position: absolute;
@@ -79,6 +86,7 @@ html {
 #box_6 {
 	background-color: #DF8BF0;
 	position: relative;
+	float: left;
 }
 #arrow_6 {
 	position: absolute;
