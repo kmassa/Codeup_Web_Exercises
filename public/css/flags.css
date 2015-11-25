@@ -136,5 +136,23 @@
 	bottom: 0px;
 	left: 5px;
 }
-
+#left-whi-tri {
+	width: 0;
+	height: 0;
+	border-top: 70px solid transparent;
+	border-left: 114px solid #FFF;
+	border-bottom: 74px solid transparent;
+	position: absolute;
+	top:16px;
+	left: 0px;
+}
+#top-blu-tri {
+	width: 0;
+	height: 0;
+	border-left: 115px solid transparent;
+	border-right: 120px solid transparent;
+	border-top: 70px solid #3F4B72;
+	position: absolute;
+	top: 0px;
+	right: 22px;
 }

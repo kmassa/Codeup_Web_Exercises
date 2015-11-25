@@ -11,7 +11,7 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
-
+/* Overall container*/
 #container {
 	margin: 10px 0px;
 	width: 500px;
@@ -19,11 +19,14 @@ html {
 	padding: 3px;
 
 }
+/*nth child test - 3 rows of 2*/
+
 
 /*.box:nth-child(2n+2)  {
 	margin-right: 200px
 }*/
 
+/*adjust all boxes*/
 .box {
 	height: 72px;
 	width: 72px;
@@ -34,7 +37,7 @@ html {
 	font-size: 15px;
 }
 
-
+/*red box */
 #box_1 {
 	background-color: #D84231;
 	position: relative;
@@ -47,6 +50,7 @@ html {
 	top: -40px;
 	right: -40px;
 }
+/*orange box */
 #box_2 {
 	background-color: #EAAE33;
 	position: relative;
@@ -58,7 +62,7 @@ html {
 	top: -40px;
 	right: -40px;
 }
-
+/*yellow box */
 #box_3 {
 	background-color: #FDF85D;
 	position: relative;
@@ -72,7 +76,7 @@ html {
 	top: -40px;
 	right: -40px;
 }
-
+/*green box */
 #box_4 {
 	background-color: #578C05;
 	position: relative;
@@ -85,7 +89,7 @@ html {
 	top: -40px;
 	right: -40px;
 }
-
+/*blue box */
 #box_5 {
 	background-color: #234AFB;
 	position: relative;
@@ -96,7 +100,7 @@ html {
 	top: -40px;
 	right: -40px;
 }
-
+/*purple box */
 #box_6 {
 	background-color: #DF8BF0;
 	position: relative;
