@@ -1,0 +1,140 @@
+#japan {
+	height: 150px;
+	width: 250px;
+	padding: 11px;
+	border: 1px solid black;
+	margin: 30px;
+	color: #FFF;
+	position:relative;
+}
+#circle_1 {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	position: absolute;
+	top: 40px;
+	right:90px;
+}
+
+#norway {
+	height: 150px;
+	width: 250px;
+	padding: 11px;
+	border: 1px solid black;
+	margin: 30px;
+	background-color: #3F4B72;
+	position:relative;
+}
+#n1 {
+	height: 60px;
+	width: 60px;
+	padding: 5px;
+	border: 1px solid #FFF;
+	background-color: #FFF;
+	position: absolute;
+	top:0px;
+	left:0px;
+}
+#n_1 {
+	height: 50px;
+	width: 50px;
+	padding: 5px;
+	border: 1px solid #red;
+	background-color:red;
+	position: absolute;
+	top:0px;
+	left:0px;
+}
+#n2 {
+	height: 60px;
+	width: 60px;
+	padding: 5px;
+	border: 1px solid #FFF;
+	background-color: #FFF;
+	position: absolute;
+	bottom:0px;
+	left:0px;
+}
+#n_2 {
+	height: 50px;
+	width: 50px;
+	padding: 5px;
+	border: 1px solid red;
+	background-color:red;
+	position: absolute;
+	bottom:0px;
+	left:0px;
+}
+#n3 {
+	height: 60px;
+	width: 160px;
+	padding: 5px;
+	border: 1px solid #FFF;
+	background-color: #FFF;
+	position: absolute;
+	top:0px;
+	right:0px;
+}
+#n_3 {
+	height: 50px;
+	width: 150px;
+	padding: 5px;
+	border: 1px solid red;
+	background-color:red;
+	position: absolute;
+	top:0px;
+	right:0px;
+}
+#n4 {
+	height: 60px;
+	width: 160px;
+	padding: 5px;
+	border: 1px solid #FFF;
+	background-color: #FFF;
+	position: absolute;
+	bottom:0px;
+	right:0px;
+}
+#n_4 {
+	height: 50px;
+	width: 150px;
+	padding: 5px;
+	border: 1px solid red;
+	background-color:red;
+	position: absolute;
+	bottom:0px;
+	right:0px;
+}
+ /*Union Jack*/
+#jack {
+	height: 150px;
+	width: 250px;
+	padding: 11px;
+	border: 1px solid black;
+	margin: 30px;
+	background-color: red;
+	position:relative;
+}
+#top-whi-tri {
+	width: 0;
+	height: 0;
+	border-left: 125px solid transparent;
+	border-right: 140px solid transparent;
+	border-top: 80px solid #FFF;
+	position: absolute;
+	top: 0px;
+	right: 5px;
+}
+#bot-whi-tri {
+	width: 0;
+	height: 0;
+	border-left: 122px solid transparent;
+	border-right: 140px solid transparent;
+	border-bottom: 75px solid #FFF;
+	position: absolute;
+	bottom: 0px;
+	left: 5px;
+}
+
+}
