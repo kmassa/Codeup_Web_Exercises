@@ -146,6 +146,17 @@
 	top:16px;
 	left: 0px;
 }
+
+#right-whi-tri {
+	width: 0;
+	height: 0;
+	border-top: 73px solid transparent;
+	border-right: 130px solid #FFF;
+	border-bottom: 77px solid transparent;
+	position: absolute;
+	right: 0px;
+	top: 13px;
+}
 #top-blu-tri {
 	width: 0;
 	height: 0;
@@ -156,3 +167,89 @@
 	top: 0px;
 	right: 22px;
 }
+#bot-blu-tri {
+	width: 0;
+	height: 0;
+	border-left: 112px solid transparent;
+	border-right: 127px solid transparent;
+	border-bottom: 67px solid #3F4B72;
+	position: absolute;
+	bottom: 0px;
+	left: 15px;
+}
+#left-blu-tri {
+	width: 0;
+	height: 0;
+	border-top: 60px solid transparent;
+	border-left: 104px solid #3F4B72;
+	border-bottom: 64px solid transparent;
+	position: absolute;
+	top:26px;
+	left: 0px;
+}
+#right-blu-tri {
+	width: 0;
+	height: 0;
+	border-top: 65px solid transparent;
+	border-right: 118px solid #3F4B72;
+	border-bottom: 68px solid transparent;
+	position: absolute;
+	top:20px;
+	right: 0px;
+}
+#hor-bar-white {
+	width: 275px;
+	height: 60px;
+	background-color: #FFF;
+	position: absolute;
+	float:top;
+	top:60px;
+	left: 0px;
+}
+#hor-bar-red {
+	width: 275px;
+	height: 40px;
+	background-color: red;
+	position: absolute;
+	float:top;
+	top:70px;
+	left: 0px;
+}
+#top-vert-white {
+	width: 60px;
+	height: 70px;
+	background-color: #FFF;
+	position: absolute;
+	float: left;
+	top: 0px;
+	left: 105px;
+}
+
+#top-vert-red {
+	width: 40px;
+	height: 70px;
+	background-color: red;
+	position: absolute;
+	float: left;
+	top: 0px;
+	left: 115px;
+}
+#bot-vert-white {
+	width: 60px;
+	height: 60px;
+	background-color: #FFF;
+	position: absolute;
+	float: left;
+	bottom: 0px;
+	left: 105px;
+}
+#bot-vert-red {
+	width: 40px;
+	height: 64px;
+	background-color: red;
+	position: absolute;
+	float: left;
+	bottom: 0px;
+	left: 115px
+}
+
