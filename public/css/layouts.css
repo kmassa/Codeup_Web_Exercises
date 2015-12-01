@@ -1,0 +1,67 @@
+header{
+	background-image:url(img/deathstar2.png);
+	position: relative;
+	float:top;
+	width: 100%;
+}
+h1 {
+	color:#000;
+	position: absolute;
+	float:top;
+	left: 80px;
+	font-family: verdana fantasy serif;
+	font-size: 50px;
+}
+body {
+	background-color: #e1e1e1;
+}
+aside {
+
+	width: 200px;
+	height: 600px;
+	border-radius: 3px;
+	padding: 20px;
+	border: 1px solid #000;
+	background-color: #FFF;
+	position: relative;
+	float: left;
+}
+aside li {
+	/*padding:10px;*/
+	margin: 10px 0px;
+}
+section {
+	width: 800px;
+	padding: 20px;
+	position: relative;
+	float: left;
+	
+}
+#image {
+	width: 400px;	
+	height: 400px;
+	position: relative;
+	float:left;
+}
+p {
+	padding: 20px;
+	font-family: verdana serif;
+	font-size: #000;
+	font-size: 20px;
+	position: relative;
+	clear:left;
+}
+footer {
+	width: 100%;
+	height: 60px;
+	font-family: serif;
+	font-size: 15px;
+	position: relative;
+	float: bottom;
+}
+li {
+	display: inline;
+	padding:10px;
+}
+
+

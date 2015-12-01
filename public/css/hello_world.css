@@ -1,12 +1,14 @@
 
+	
 		
 		body{
 			background-image: url(/img/boys.jpg);
 			color: #FFF;
+			margin: 15px;
 		}
 
 		h1 {
-			color: red; 
+			color: #F00; 
 			text-decoration: underline;
 
 		}
@@ -16,13 +18,17 @@
 		}
 
 		body {
-			background-color: #FFFF00;
+			/*background-color: #FFFF00;*/
 			font-family: "papyrus", "century gothic", serif;
 		}
 
 		ul { list-style: square; }
-
+		.website{
+			color: #F00;
+			font-weight: bolder;
+		}
+/*
 		#hawaii {
 			text-decoration: blink; 
-		}
+		}*/
 		
