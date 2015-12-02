@@ -1,9 +1,11 @@
+/*-------------header----------*/
 header{
 	background-image:url(img/deathstar2.png);
 	position: relative;
 	float:top;
 	width: 100%;
 }
+
 h1 {
 	color:#000;
 	position: absolute;
@@ -12,24 +14,37 @@ h1 {
 	font-family: verdana fantasy serif;
 	font-size: 50px;
 }
+#head-nav{
+	display: inline;
+}
+/*-----page----*/
 body {
 	background-color: #e1e1e1;
 }
+li {
+	display: inline;
+	padding:10px;
+}
+
 aside {
 
 	width: 200px;
 	height: 600px;
-	border-radius: 3px;
+	border-radius: 5px;
 	padding: 20px;
 	border: 1px solid #000;
 	background-color: #FFF;
+	font-family: tahoma;
+	font-size: 20px;
 	position: relative;
 	float: left;
 }
-aside li {
-	/*padding:10px;*/
-	margin: 10px 0px;
+.link {
+	width: 150px;
+	padding:1px;
+	margin: 0px;
 }
+/*-----element-----*/
 section {
 	width: 800px;
 	padding: 20px;
@@ -43,25 +58,28 @@ section {
 	position: relative;
 	float:left;
 }
+/*------------paragraph--------*/
 p {
-	padding: 20px;
+	padding: 10px;
 	font-family: verdana serif;
 	font-size: #000;
 	font-size: 20px;
 	position: relative;
 	clear:left;
 }
+/*------footer------*/
 footer {
 	width: 100%;
-	height: 60px;
+	height: 125px;
+	background-color: #83888A;
+	padding: 5px;
+	margin-right: 5px;
 	font-family: serif;
-	font-size: 15px;
 	position: relative;
-	float: bottom;
+	float: left;
+	bottom: 0px;
 }
-li {
-	display: inline;
-	padding:10px;
+
 }
 
 
