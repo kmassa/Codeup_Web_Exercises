@@ -8,6 +8,7 @@ html {
 /*----container----*/
 .container {
 	padding: 10px;
+    border: 1px solid black;
     margin: 0 auto;
     width: 80%;
     max-width: 1200px;
@@ -16,19 +17,26 @@ html {
  /*----rows-----*/
  .row {
     width:100%;
+    margin: 5px 0;
+    /*margin-left: 5%;
+    margin-right: 5%;*/
 }
 
 .row:after {
     content: "";
     display: table;
     clear: both;
+
+}
+.push {
+    clear:both;
 }
 /*----columns-----*/
 .column {
     float: left;
     padding: 10px;
     border: 1px solid black;
-    margin: 0px;
+    margin: 0;
 }
 .column.one-half {
     width: 50%;
@@ -41,14 +49,25 @@ html {
 }
 .column.one-fourth {
     width: 25%;
+    background-color: green;
 }
 .column.one-sixth {
     width: 16.6%;
+    background-color: purple;
 }
 .column.one-eighth {
     width: 12.5%;
+    background-color: blue;
+}
+.column.two-third {
+    width: 66.6%;
+    background-color: red
+
+}
+.column.three-eigth {
+    width: 37.5%;
+    background-color: orange
 }
 .offset-one-fourth {
-	margin-left: 25%;
+    margin-left: 25%;
 }
-
