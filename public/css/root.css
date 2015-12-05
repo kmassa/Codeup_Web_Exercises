@@ -1,11 +1,4 @@
-/*-----header------*/
 
-html {
-    box-sizing: border-box;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-}
 /*----container----*/
 .container {
 	padding: 10px;
@@ -13,52 +6,80 @@ html {
     margin: 0 auto;
     width: 80%;
     max-width: 1200px;
+    position:relative;
  }
- /*----rows-----*/
- .row {
-    width:100%;
-    margin: 5px 0;
-    /*margin-left: 5%;
-    margin-right: 5%;*/
+ /*-----nav bar--------*/
+.navigation {
+	width: 100%;
+	height: 60px;
+	background-color: #ccc;
+	border: 1px solid black;
+	font-size: 20px;
 }
 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-
-}
-/*----columns-----*/
-.column {
-    float: left;
-    padding: 10px;
-    border: 1px solid black;
-    margin: 0;
-}
-/*--------header------*/
-.head {
-	height: 10px;
-
-}
 .top-nav>li {
 	display: inline;
 	list-style: none;
 	position:relative;
 	padding: 5px;
-	float:left;
 }
 
-.image {
-	background-image:url(/img/root.png);
+/*------header-------*/
+.header {
+	background-image: url(/img/root.jpg);
 	width: 100%;
 	height: 300px;
-	position: absolute;/*
-	float:left;*/
+	position: relative;	
 }
-/*.join {
-	padding: 10px;
-	margin: 0 auto;
+.header h1 {
+	color: white;
+}
+#email {
+	position:absolute;
+	top: 60px;
+	left: 10%;
+	/*padding: 5px*/
+}
+#zip-code {
 	position: absolute;
-	float:left 25%;
+	top: 60px;
+	left: 30%;
+	/*padding: 5px;*/
 }
-*/
+#state {
+	position: absolute;
+	top: 60px;
+	right: 30%;
+	padding: 5px;
+}
+#button {
+	position: absolute;
+	top: 60px;
+	right: 15%;
+}
+.story {
+	width: 65%;
+	position: relative;
+	padding: 5px:;
+	float: left;
+}
+.update {
+	width: 30%;
+	position: relative;
+	padding: 5px;
+	float: right;
+}
+.footer {
+	clear:both;
+	width: 100%;
+	height: 80px;
+	border: 1px solid black;
+	background-color: #ccc;
+	position: relative;
+}
+.copyright {
+	position: absolute;
+	top: 30px;
+	left: 30%;
+}
+
