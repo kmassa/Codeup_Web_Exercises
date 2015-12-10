@@ -27,18 +27,20 @@ html {
  }
  /*---------column general------*/
  .column {
-    float: left;
+   /* float: left;*/
     padding: 10px;
     border: 1px solid black;
     margin: 0px;
  }
  .column-2 {
- 	width: 55%;
+ 	width: 50%;
+ 	padding:15px;
  	float: left;
  	margin: 10px;
  }
- .columns-3 {
- 	width: 30%;
+ .column-3 {
+ 	width: 35%;
+ 	padding: 15px;
  	float: left;
  	margin: 10px;
  }
@@ -47,7 +49,7 @@ html {
  /*--------nav bar---------*/
 .navigation {
 	height: 60px;
-	background-color: #ccc;
+	background-color: #FAFAFA;
 	border: 1px solid black;
 	font-size: 20px;
 }
@@ -59,11 +61,11 @@ html {
 }
 /*---------header----------*/
 .header {
-	background-image: url(/img/root.jpg);
+	background-image:url(/img/root.jpg);
 	height: 300px;
 	/*position: relative;	*/
 }
-.header h1 {
+.heading {
 	color: white;
 }
 #email {
@@ -89,29 +91,14 @@ html {
 	top: 60px;
 	right: 15%;*/
 }
-/*-----------story----------*/
-/*.story {
-	position: relative;
-	padding: 5px:;
-	float: left;*/
-}
-/*------------update----------*/
-/*.update {
-	position: relative;
-	padding: 5px;
-	float: right;*/
-}
-/*---------------footer----------*/
 .footer {
 	/*clear:both;*/
 	height: 80px;
 	border: 1px solid black;
 	background-color: #ccc;
-	/*position: relative;*/
+	position: relative;
 }
 .copyright {
-	/*position: absolute;*/
-	/*top: 30px;
-	left: 30%;*/
+	margin-left: 30%;
 }
 

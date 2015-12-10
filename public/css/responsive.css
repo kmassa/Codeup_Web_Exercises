@@ -1,39 +1,92 @@
 
+body {
+    width: 80%;
+    padding: 5px;
+    border: 1px solid black;
+    margin: 0px auto;
+    position:relative;
+}
+.nav {
+    color: blue;
+    width: 100px;
+    height: 300px;
+    padding: 5px;
+    border: 1px solid red;
+    margin: 5px;
+    list-style: none;
+}
+#red {
+   background-color: #FF0000;
+  
+}
+#orange {
+    background-color: orange;
+  
+}
+#yellow {
+    background-color: yellow;
+   
+}
+#green { 
+    background-color: green;
+   
+}
+#blue {
+    background-color: blue;
+  
+}
 
+.container {
+    width: 80%;
+    height: auto;
+    padding: 5px;
+    border: 1px solid black;
+    margin : 0px auto;
+    position: absolute;
+    float: left;
 
-/*@media screen and (min-width:550px) {
-    .eighty{
+}
+.block {
+  float: left;
+  margin: 5px;
+  padding: 5px;
+  width: 300px;
+  height: 300px;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+@media screen and(min-width:1000px) {
+    .block{
         width: 80%;
-        background-color: blue;
     }
 }
-@media screen and (min-width:700px) {
-    .thirty{
-        width: 30%;
-        background-color: green;
+@media screen and (max-width:900px) {
+    .block{
+       width: 60%;
     }
 }
-@media screen and (min-width:800px) {
-    .twenty{
-        width: 80%;
-        background-color: orange;
+@media screen and (max-width:700px) {
+    .block{
+        width: 40%;
     }
 }
-@media screen and (min-width:900px) {
-    .open{
-        width: 80%;
-        background-color: yellow;
+@media screen and (max-width:600px) {
+    .block{
+        width: 20%;
     }
 }
-@media screen and (min-width:1000px) {
-    .hundred{
-        width: 80%;
-        background-color: red;
+@media screen and (max-width:500px) {
+    .block{
+        width: 10%;
     }
-}*/
+    .nav {
+        width: 400px;
+        display: inline;
+    }
+}
 
-
-@media screen and (max-width:550px) {
+/*--------background-color--------*/
+/*@media screen and (max-width:550px) {
     body{
         width: 80%;
         background-color: blue;
@@ -63,3 +116,4 @@
         background-color: red;
     }
 }
+*/
