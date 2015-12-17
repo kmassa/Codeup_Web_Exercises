@@ -1,0 +1,91 @@
+.beets {
+	background-color: #92A5A3;
+}
+.title {
+	color: #336699;
+}
+.bigger {
+	font-size: 25px;
+	font-weight: 500;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid black;
+    margin: 1em 0;
+    padding: 0; 
+}
+.og {
+	color: green;
+	font-size: 18px;
+}
+.glyphicon-hourglass {
+	color: brown;
+}
+.glyphicon-certificate {
+	color: yellow;
+}
+.bull {
+	position: relative;
+	float: left;
+}
+.beet-intro {
+	padding: 0px 30px 0px 30px;
+
+}
+.detroit {
+	padding: 3px;
+	border: 1px solid black;
+}
+.lutz {
+	padding: 3px;
+	border: 1px solid black;
+}
+.cicco {
+	padding: 3px;
+	border: 1px solid black;
+}
+.middle {
+	width: 100%;
+	display: inline;
+}
+.broc-left {
+	padding: 3px;
+	border: 1px solid black;
+	margin: 30px 0px 10px 0px;
+	
+}
+.goliath {
+	overflow: visible;
+	position: relative;
+	top: -20px;
+}
+.broc-mid {
+	padding: 15px;
+	margin: 30px 0px 10px 0px;
+}
+.sprouts {
+	background-color: #D9AE9C;
+	padding: 3px;
+	border: 1px solid black;
+	margin: 10px 0px 10px 0px;
+	position: relative;
+}
+.brus-spr  {
+	overflow: visible;
+	position: relative;
+	right: -350px;
+	bottom: -20px;	
+}
+.raab {
+	background-color: #D2B1AC;
+	padding: 3px 3px 20px 3px;	
+	border: 1px solid black;
+	margin: 10px 0px 20px 0px;
+}
+.sorrento {
+	background-color: #D2B1AC;
+	padding: 3px;
+	border: 1px solid black;
+}

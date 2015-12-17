@@ -57,18 +57,21 @@
 	top: 60px;
 	right: 15%;
 }
+/*--------main story--------*/
 .story {
 	width: 65%;
 	position: relative;
 	padding: 5px:;
 	float: left;
 }
+/*-----------side story----------*/
 .update {
 	width: 30%;
 	position: relative;
 	padding: 5px;
 	float: right;
 }
+/*-----------footer------------*/
 .footer {
 	clear:both;
 	width: 100%;
