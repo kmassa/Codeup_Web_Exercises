@@ -1,3 +1,8 @@
+body {
+	font-family: Georgia,"Times New Roman", Times, serif;
+	
+}	
+	
 .log  {
 	margin-right: 100px;
 }
@@ -15,6 +20,9 @@
 }
 .four-beets {
 	width: 100%;
+}
+.top {
+	height: 150px;
 }
 .title {
 	color: #336699;
