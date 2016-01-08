@@ -24,7 +24,7 @@ if (color=="red"){
 	console.log("I do not know that color");
 }
 
-var message=(color==favorite) ?console.log("yes.") : console.log("no.")	
+(color==favorite) ?console.log("yes.") : console.log("no.")	
 	// console.log(message)	
 
 
