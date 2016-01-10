@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS play</title>
+    <link rel="stylesheet" href = "css/c04.css" />
+</head>
+<body>
+
+    <script>
+    	var today = new Date ();
+    	var hourNow = today.getHours ();
+    	var greeting;
+
+    	if (hourNow > 18) {
+
+    		greeting = 'Good evening';
+    	} else if (hourNow >12) {
+    		greeting = 'Good afternoon'; 
+    	} else if (hourNow > 0) {
+    		greeting = 'Good morning'; 
+    	} else {
+    		greeting = 'Welcome';
+    	}
+    	document.write (greeting)
+
+    	// var price = price, quantity, total;
+    	// price = 5; 
+    	// quantity = 14; 
+    	// total = price * quantity; 
+
+    	// var price = 5, quantity = 14; 
+    	// total = price * quantity
+
+    </script>
+    <div id="page2">
+    	<h1>Bullseye</h1>
+    	<img src="img/teacher.png" id="teacher2" alt"">
+    	<div id="blackboard"> </div>
+    </div>
+    <script>
+    var table = 3;             // Unit of table
+	var operator = 'addition'; // Type of calculation
+	var i = 1;                 // Set counter to 1
+	var msg = '';              // Message
+
+		if (operator === 'addition') {
+  	// Do addition
+  		while (i < 11) {
+    	msg += i + ' + ' + table + ' = ' + (i + 	table) + '<br />';
+    	i++;
+  		}
+	} else {
+  	// Do multiplication
+  		while (i < 11) {
+    	msg += i + ' x ' + table + ' = ' + (i * table) + '<br />';
+    	i++;
+  		}
+	}
+
+// Write the message into the page
+var el = document.getElementById('blackboard');
+el.innerHTML = msg;
+
+
+
+    </script>
+
+</body>
+</html>
