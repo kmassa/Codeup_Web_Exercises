@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>functions exercise</title>
+</head>
+<body>
+    <script>
+
+
+(function () { 
+"use strict"
+
+// to Uppercase
+    var str1 = "Greetings to all.";
+
+
+    function Upper (){
+    var str2 = str1.toUpperCase();
+    document.write(str2);
+    }
+    Upper();
+//concantenate
+    var stat1 = "We "
+    var stat2 = "are "
+    var stat3 = "Sparta"
+
+    function statement(){
+        document.write (stat1 + stat2 + stat3);
+    }
+    statement();
+
+//concatenate 2
+    function conC(animal){
+         console.log("when",animal,"fly");
+    }
+    conC("donkeys");
+
+ //to Celsius
+
+    function toCelsius(farenheit){
+        document.write ( farenheit -32 * (5/9));
+    }
+
+    toCelsius (35);
+//to celsius 2
+    function toCel(temp){
+        var temp = prompt("what temperature would you like to convert?");
+        alert(temp - 32 * (5/9));
+    }
+toCel();
+
+// lbs to kilograms
+
+    function toKilo (pounds){
+        console.log(pounds / 2.2 + " kilograms");
+    }
+    toKilo (195); 
+
+//Make sure a string is between 5 and 10 characters long
+
+    function strL (cow){
+        var pig = cow.length;
+        if (pig> 10){
+            console.log ("too long");
+        } else if (pig < 5) {
+            console.log ("too short");
+        } else {
+            console.log ("just right");
+        }
+    }
+    strL ("bigger");
+
+//Determine if a given letter is a vowel
+var vowel = ["a","e","i","o","u"];
+
+    function isVow (letter){        
+        if (letter==vowel) {
+            console.log ("yes " + letter + " is a vowel");
+        } else if (letter === "y") {
+            console.log("sometimes");
+        } else {
+            console.log("no, " + letter + " is not a vowel");
+        }
+
+    }
+    isVow ("y");
+
+  })();
+
+    </script>
+   
+</body>
+</html>

@@ -21,7 +21,6 @@ var winMessage = "Dave collapses on the couch inside the door.  He\'s still not 
 
 
 
-
 //TODO: Use a while loop to determine if the player is at the win (winning) destination.  
 
 //TODO: Use a switch to check the current location of the player.
@@ -71,23 +70,23 @@ while(currentLocation!=winDestination){
 			response = prompt("Where would you like to go next?");
 			if(response=="go east"){
 				currentLocation = "clearing";
-			} else if (response == " go north"){
+			} else if (response == "go north"){
 				currentLocation = "house";
 			}
 		break;
 		
-
 		default:
 			
 	}
 } 
 alert(winMessage);	
 
-var counter = 0;
-
 function add() {
     counter += 1;
-}	
-console.log (counter)	
+}
+
+
+
+	
 
 
