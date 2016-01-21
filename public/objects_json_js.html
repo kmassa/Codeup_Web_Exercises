@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>objects json</title>
+</head>
+<body>
+    <script>
+
+// var books = {"results": [
+
+var books =  [
+	{
+		"title"  : "Glass Sword",
+		"author" : 
+		{ 
+			"firstName" : " Victoria",
+			"lastName"  : "Ayeyard"
+		},
+		"isbn"	 : "0062310666",
+		"description" : "416p",
+		"publisher"   : "Harper Collins Children's Books",
+		"publishDate" : "2016"
+	},
+	{
+		"title"  : "Forbidden",
+		"author" : 
+		{ 
+			"firstName" : "Eve",
+			"lastName"  : "Bunting"
+		},
+		"isbn"	 : "054439092X",
+		"description" : "224p",
+		"publisher"   : "Clarion Books",
+		"publishDate" : "2015"
+	},
+	{
+		"title"  : "The Guilded Cage",
+		"author" : 
+		{ 
+			"firstName" : "Lucinda",
+			"lastName"  : "Gray"
+		},
+		"isbn"	 : "1627791817",
+		"description" : "256p",
+		"publisher"   : "Henry Holt and Co.",
+		"publishDate" : "2016"
+	},
+	{
+		"title"  : "Love, Lies, & Spies",
+		"author" : 
+		{ 
+			"firstName" : "Cindy",
+			"lastName"  : "Anstey"
+		},
+		"isbn"	 : "1250084032",
+		"description" : "368p",
+		"publisher"   : "Swwon Reads",
+		"publishDate" : "2016"
+	},
+	{
+		"title"  : "Boneshaker",
+		"author" : 
+		{ 
+			"firstName" : "Cherie",
+			"lastName"  : "Priest"
+		},
+		"isbn"	 : "0765318415",
+		"description" : "416p",
+		"publisher"   : "Tor Books",
+		"publishDate" : "2016"
+	}
+
+]
+// }
+// console.log(books);
+
+// books.title.forEach(function (index, element) {
+// 	console.log("Book name:" + books.title);
+//     // console.log("Title: " + books.title);
+    // console.log("Author: " + books.author);
+    // console.log("publisher:" + books.publisher);
+ // });
+
+//this on works
+
+	// books.forEach(function (books, index) {
+ //        console.log(books.title);
+ //        console.log(books.publisher);
+ //        console.log(books.author);
+ //    });
+
+// var a = ["a", "b", "c"];
+// a.forEach(function(entry) {
+//     console.log(entry);
+// });
+
+//this also works
+
+for (var i = 0; i < books.length; i++) {
+    console.log(books[i].isbn);
+};
+
+    </script>
+</body>
