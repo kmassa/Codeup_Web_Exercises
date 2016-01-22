@@ -1,0 +1,107 @@
+/<!-- /google_maps_api.html -->
+<!-- google api AIzaSyA4B8fgw3sLwbxVj5Q3_qo8oL9JXL1mrJ8 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Google Maps Exercise </title>
+
+    <style type="text/css">
+        #map-canvas {
+            width: 770px;
+            height: 481px;
+        }
+    </style>
+</head>
+<body>
+    <!-- div to hold map -->
+    <div id="map-canvas"></div>
+
+    <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4B8fgw3sLwbxVj5Q3_qo8oL9JXL1mrJ8"></script>
+
+    <!-- Script to show address on map -->
+    <script type="text/javascript">
+    (function() {
+        "use strict";
+// Include code from previous example
+
+// Set our address to geocode
+	var address = "20079 Stone Oak Pkwy, San Antonio, TX, 78258";
+
+// Init geocoder object
+	var geocoder = new google.maps.Geocoder();
+
+// Geocode our address
+	geocoder.geocode({ "address": address }, function(results, status) {
+		console.log("geocoder finished");
+   // Check for a successful result
+   	if (status == google.maps.GeocoderStatus.OK) {
+   		console.log(results);
+       // Recenter the map over the address
+       map.setCenter(results[0].geometry.location);
+       //also map.panTo(results[0].geometry.location);  to pan to location
+
+///markers
+		//use this to move marker
+		// var codeup = { lat: 29.428459, lng: -98.492433 };
+
+       var marker = new google.maps.Marker ({
+       	"position": results [0].geometry.location,
+       	// "position": codeup
+       	//use above if setting different variable
+       	"map":map
+       });
+
+       var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading"> Aldaco\'s Mexican Cuisine</h3>'+
+      // '<div id="bodyContent">'
+      '<p><b>Aldaco\'s Mexican Cuisine in Stoneoak</b>, is one of three Aldaco\'s '+
+      'restaurants in the San Antonio area serving a unique blend of Mexican Food.'+
+      ' It\'s specialties include a cilantro cream sauce, a cilantro dressing, '+
+      ' and a tasty avocado margarita that is intoxicatingly delicious  </p> '+
+      
+      '<p>Visit Aladaco\'s website: <a href="http://ehttp://aldacosrestaurants.com/locations/stone-oak">'+
+      'http://http://aldacosrestaurants.com/locations/stone-oak</a> '+
+      '</div>'+
+      '</div>';
+
+
+       var infowindow = new google.maps.InfoWindow({
+    	content: contentString
+	   });
+
+       // infowindow.open(map, marker);
+
+       marker.addListener('click', function() {
+    	infowindow.open(map, marker);
+  		});
+
+   	} else {
+
+       // Show an error message with the status if our request fails
+       alert("Geocoding was not successful - STATUS: " + status);
+   }
+});
+
+        // Set our map options
+        var mapOptions = {
+            // Set the zoom level
+            zoom: 18,
+
+            // This sets the center of the map at our location
+            center: {
+                lat:  29.4284595,
+                lng: -98.492433
+            },
+            mapTypeId: google.maps.MapTypeId.HYBRID
+        }
+
+        // Render the map
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    })();
+    </script>
+</body>
+</html>
