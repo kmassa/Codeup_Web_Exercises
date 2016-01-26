@@ -5,18 +5,66 @@
 </head>
 <body>
 
+    <h1 id="codeup">jquery practice page</h1>
+
+    <h3 class="codeup"> things you need to know</h3>
+
+    <p class="information"> this is a paragraph of reasonably useful informatioa you may want to keep handy in case of rodent infestation </p>
+
+    <div class="post">Keep this handy</div>
+
+    <ul class="info-list">
+        <li>The first list item.</li>
+        <li>The second list item.</li>
+        <li>The third list item.</li>
+    </ul>
+
+    <h3 class="codeup"> things that are more trivia</h3>
+
+    <p class="information"> this list contains things that are more trivia related to take your mind off of your rodent infestation</p>
+
+    <div class="post">file with useless stuff</div>
+
+    <ul class="info-list">
+        <li>The first list item.</li>
+        <li>The second list item.</li>
+        <li>The third list item.</li>
+    </ul>
+
+    <h2 class="codeup">Don't Forget!</h2>
+
+
 <!-- jquery from CDN -->
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 <!-- jquery from local file -->
 
-    // <!-- <script src="/js/jquery.js"></script> -->
+     <!-- <script src="/js/jquery.js"></script> -->
 
 
     <script>
+//     $(document).ready(function() {
+//     var contents = $('#ending').html();
+//     alert(contents);
+// });
 
-    $(document).ready(function() {
-    alert( 'The DOM has finished loading!' );
+
+//     $(document).ready(function() {
+//     console.log( 'The DOM has finished loading!' );
+//         $(".codeup").css("border", "1px solid red");
+// });
+
+//     $(document).ready(function() {
+//     console.log( 'The DOM has finished loading!' );
+//         $("li").css("font-size", "20px");
+//         $("h1, p, li").css('background-color', '#FF0');
+//         var contents = $("h1").html();
+//         alert(contents);
+// });
+
+$(document).ready(function() {
+    console.log( 'The DOM has finished loading!' );
+        $("h1, p, li").css('background-color', '#FF0');
 });
 
     </script>
