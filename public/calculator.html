@@ -1,0 +1,163 @@
+<html>
+<head>
+	<title></title>
+	<style>
+	#calculator {
+		width: 390px;
+		height: 495px;
+		padding: 3px;
+		border: 1px solid black;
+		margin: 5px;
+	}
+	.num-button {
+		width: 80px;
+		height: 80px; 
+		padding: 5px;
+		font-size: 15px;
+		margin-top: 10px;
+		margin-left: 10px
+	}
+	#operator {
+		width: 25px;
+	}
+	.display {
+		padding: 5px; 
+		border: 1px solid black;
+		margin: 5px;
+		font-size: 13px;
+	}
+	#calculate{
+	width:160px;
+}
+	</style>
+
+</head>
+<body>
+	<div id="calculator">
+		<input type="text" id="first-operand"class="display">
+		<input type="text" id="operator" class="display">
+		<input type="text" id="second-operand" class="display">
+		<!-- <button id="calculate">Calculate</button> -->
+		<div id="answer"></div>
+
+		<button class="num-button" id="one">1</button>
+		<button class="num-button"id="two">2</button>
+		<button class="num-button"id="three">3</button>
+		<button class="num-button"id="divide">/</button>
+		<button class="num-button"id="four">4</button>
+		<button class="num-button"id="five">5</button>
+		<button class="num-button"id="six">6</button>
+		<button class="num-button"id="multiply">*</button>
+		<button class="num-button"id="seven">7</button>
+		<button class="num-button"id="eight">8</button>
+		<button class="num-button"id="nine">9</button>
+		<button class="num-button"id="add">+</button>
+		<button class="num-button"id="zero">0</button>
+		<button class="num-button"id="decimal">.</button>
+		<button class="num-button"id="clear">C</button>
+		<button class="num-button"id="subtract">-</button>
+		<button class="num-button"id="calculate">=</button>
+	</div>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript">
+		var num = "";
+		var currentDisplay = '#first-operand';
+    	var math = "";
+    	var whole = "";
+		$(document).ready(function(){
+			$("#one").click(function(){
+				num = num + '1';
+				$("#first-operand").val(num); 
+			});
+			$("#two").click(function(){
+				num = num + '2';
+				$("currentDisplay").val(num); 
+			});
+			$("#three").click(function(){
+				num = num + '3';
+				$("currentDisplay").val(num); 
+			});
+			$("#four").click(function(){
+				num = num + '4';
+				$("currentDisplay").val(num); 
+			});
+			$("#five").click(function(){
+				num = num + '5';
+				$("currentDisplay").val(num); 
+			});
+			$("#six").click(function(){
+				num = num + '6';
+				$("currentDisplay").val(num); 
+			});
+			$("#seven").click(function(){
+				num = num + '7';
+				$("currentDisplay").val(num); 
+			});
+			$("#eight").click(function(){
+				num = num + '8';
+				$("currentDisplay").val(num); 
+			});
+			$("#nine").click(function(){
+				num = num + '9';
+				$("currentDisplay").val(num); 
+			});
+			$("#zero").click(function(){
+				num = num + '0';
+				$("currentDisplay").val(num); 
+			});
+			$('#plus').click(function() {
+    			math = '+';
+    			$('#operator').val(math);
+    		});
+    		$('#minus').click(function() {
+    			math = '-';
+    			$('#operator').val(math);
+    		});
+    		$('#multiply').click(function() {
+    			math = '*';
+    			$('#operator').val(math);
+    		});
+    		$('#divide').click(function() {
+    			math = '/';
+    			$('#operator').val(math);
+    		});
+
+			$('.display').click(function() {
+    			if (math !== '') {
+    			currentDisplay = '#second-operand';
+    			num = "";
+    			}
+    		});
+    			
+
+			$("#calculate").click(function(){
+				var firstOperand = $("#first-operand").val();
+				console.log(firstOperand);
+				var secondOperand = $("#second-operand").val();
+				console.log(secondOperand);
+				var operator = $("#operator").val();
+				console.log(operator);
+				if (math == '+') {
+    			whole = firstOperand + secondOperand;
+    			
+    			} else if (math == '-') {
+    			whole = firstOperand - secondOperand;
+    			} else if (math == '*') {
+    			whole = firstOperand * secondOperand;	
+    			} else if (math == '/') {
+    			whole = firstOperand / secondOperand;
+    			};
+    			$('#answer').val(whole);
+    		});
+
+
+    	$('#clear').click(function() {
+    		$('.display').val("");
+    		currentDisplay = '#first-operand';
+    	});
+});
+	
+	</script>
+</body>
+</html>

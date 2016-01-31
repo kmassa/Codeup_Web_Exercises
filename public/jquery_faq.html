@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jquery faq</title>
+    <style>
+
+.questions {
+    display:block
+}
+
+.invisible {
+    display:none
+}
+
+    </style>
+</head>
+<body>
+
+    <h1 id="nat-parks">National Parks</h1>
+
+    <h3 class="parks"> FAQ about National Parks</h3>
+
+    
+    <dl class="questions">
+        <li>The first list item.</li>
+        <li>The second list item.</li>
+        <li>The third list item.</li>
+        <li>The fourth list item.</li>
+        <li>The fifth list item.</li>
+        <li>The sixth list item.</li>
+        <li>The seventh list item.</li>
+        <li>The eighth list item.</li>
+        <li>The nineth list item.</li>
+        <li>The tenth list item.</li>
+    </dl>
+
+    <h3 class="parks"> FAQ about National Parks</h3>
+
+    
+    <dl class="questions">
+        <li>The first list item.</li>
+        <li>The second list item.</li>
+        <li>The third list item.</li>
+        <li>The fourth list item.</li>
+        <li>The fifth list item.</li>
+        <li>The sixth list item.</li>
+        <li>The seventh list item.</li>
+        <li>The eighth list item.</li>
+        <li>The nineth list item.</li>
+        <li>The tenth list item.</li>
+    </dl>
+<!-- <a href="#" id="important">Click to toggle </a> -->
+
+
+<!-- jquery from CDN -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+
+    <script>
+
+$(document).ready(function() {
+
+
+
+
+    // });
+    // $('.questions li').each(function(index){
+    //     if (index == 0) {
+    //         $(this).css("font-weight","bold");
+    //     }
+    // });
+    // $('li').click(function(){
+    //     $(this).parent().addClass('invisible');
+    //     // $(this).addClass('invisible');
+    // });
+
+    $('ul').each(function() {
+             $(this).children().first().css('font-weight', 'bold'); 
+            });
+        $('li').click(function() {
+            $(this).parent().addClass('invisible');
+        });
+    
+// //get input form first box
+
+});
+// //#element-input = ID frst box, value second
+// $("this-button").click (function()
+
+// var elementInput = $("#element-input").val();
+//     console.log(elementInput);
+
+// //get input from second box
+
+// var secondBox = $("#value-input").val();
+//     console.log(secondBox);
+
+// //select items from first box
+
+// $(element-input).addClass ('important');
+
+// $(element-input).html(secondBox);
+
+
+    // $('#important').click(function(event) {
+    //     $('.questions li').toggleClass('invisible');
+    </script>
+</body>
+</html>
