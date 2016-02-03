@@ -1,163 +1,159 @@
+<!DOCTYPE html>
+ <!-- Thanks Holly -->
 <html>
 <head>
-	<title></title>
-	<style>
-	#calculator {
-		width: 390px;
-		height: 495px;
-		padding: 3px;
-		border: 1px solid black;
-		margin: 5px;
-	}
-	.num-button {
-		width: 80px;
-		height: 80px; 
-		padding: 5px;
-		font-size: 15px;
-		margin-top: 10px;
-		margin-left: 10px
-	}
-	#operator {
-		width: 25px;
-	}
-	.display {
-		padding: 5px; 
-		border: 1px solid black;
-		margin: 5px;
-		font-size: 13px;
-	}
-	#calculate{
-	width:160px;
-}
-	</style>
+    <title>Calculator</title>
+    <meta charset="utf-8">
 
-</head>
+    <!--CSS Reset -->
+	<link rel="cssstylereset" href="/css/normalize.css">
+
+	<!-- CSS page -->
+	<link rel="stylesheet" href="/css/calculator.css">
+   </head>
 <body>
-	<div id="calculator">
-		<input type="text" id="first-operand"class="display">
-		<input type="text" id="operator" class="display">
-		<input type="text" id="second-operand" class="display">
-		<!-- <button id="calculate">Calculate</button> -->
-		<div id="answer"></div>
-
-		<button class="num-button" id="one">1</button>
-		<button class="num-button"id="two">2</button>
-		<button class="num-button"id="three">3</button>
-		<button class="num-button"id="divide">/</button>
-		<button class="num-button"id="four">4</button>
-		<button class="num-button"id="five">5</button>
-		<button class="num-button"id="six">6</button>
-		<button class="num-button"id="multiply">*</button>
-		<button class="num-button"id="seven">7</button>
-		<button class="num-button"id="eight">8</button>
-		<button class="num-button"id="nine">9</button>
-		<button class="num-button"id="add">+</button>
-		<button class="num-button"id="zero">0</button>
-		<button class="num-button"id="decimal">.</button>
-		<button class="num-button"id="clear">C</button>
-		<button class="num-button"id="subtract">-</button>
-		<button class="num-button"id="calculate">=</button>
-	</div>
-
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-	<script type="text/javascript">
-		var num = "";
-		var currentDisplay = '#first-operand';
-    	var math = "";
-    	var whole = "";
-		$(document).ready(function(){
-			$("#one").click(function(){
-				num = num + '1';
-				$("#first-operand").val(num); 
-			});
-			$("#two").click(function(){
-				num = num + '2';
-				$("currentDisplay").val(num); 
-			});
-			$("#three").click(function(){
-				num = num + '3';
-				$("currentDisplay").val(num); 
-			});
-			$("#four").click(function(){
-				num = num + '4';
-				$("currentDisplay").val(num); 
-			});
-			$("#five").click(function(){
-				num = num + '5';
-				$("currentDisplay").val(num); 
-			});
-			$("#six").click(function(){
-				num = num + '6';
-				$("currentDisplay").val(num); 
-			});
-			$("#seven").click(function(){
-				num = num + '7';
-				$("currentDisplay").val(num); 
-			});
-			$("#eight").click(function(){
-				num = num + '8';
-				$("currentDisplay").val(num); 
-			});
-			$("#nine").click(function(){
-				num = num + '9';
-				$("currentDisplay").val(num); 
-			});
-			$("#zero").click(function(){
-				num = num + '0';
-				$("currentDisplay").val(num); 
-			});
-			$('#plus').click(function() {
-    			math = '+';
-    			$('#operator').val(math);
-    		});
-    		$('#minus').click(function() {
-    			math = '-';
-    			$('#operator').val(math);
-    		});
-    		$('#multiply').click(function() {
-    			math = '*';
-    			$('#operator').val(math);
-    		});
-    		$('#divide').click(function() {
-    			math = '/';
-    			$('#operator').val(math);
-    		});
-
-			$('.display').click(function() {
-    			if (math !== '') {
-    			currentDisplay = '#second-operand';
-    			num = "";
-    			}
-    		});
-    			
-
-			$("#calculate").click(function(){
-				var firstOperand = $("#first-operand").val();
-				console.log(firstOperand);
-				var secondOperand = $("#second-operand").val();
-				console.log(secondOperand);
-				var operator = $("#operator").val();
-				console.log(operator);
-				if (math == '+') {
-    			whole = firstOperand + secondOperand;
-    			
-    			} else if (math == '-') {
-    			whole = firstOperand - secondOperand;
-    			} else if (math == '*') {
-    			whole = firstOperand * secondOperand;	
-    			} else if (math == '/') {
-    			whole = firstOperand / secondOperand;
-    			};
-    			$('#answer').val(whole);
-    		});
-
-
-    	$('#clear').click(function() {
-    		$('.display').val("");
-    		currentDisplay = '#first-operand';
-    	});
-});
+	<h3>Let's Do Some Math</h3>
 	
-	</script>
+	<form>
+		<label for="left"></label>
+		<input type="text" name="left" class="numfield" id="left" readonly="readonly" placeholder="">
+		
+		<label for="middle"></label>	
+		<input type="text" name="middle" class="numfield" id="middle"  readonly="readonly" placeholder="">
+		
+		<label for="right"></label>
+		<input type="text" name="right" class="numfield" id="right" readonly="readonly" placeholder="">
+
+		<label for="total">=</label>
+		<input type="text" name="total" class="numfield" id="total" readonly="readonly" placeholder="">
+
+		<p>	
+		<input type="button" class="display" name="btn1" id="btn1" value="1">
+		<input type="button" class="display" name="btn2" id="btn2" value="2">
+		<input type="button" class="display" name="btn3" id="btn3" value="3">
+		<input type="button" class="display" name="plus" id="plus" value="+">
+		</p>
+		<p>
+		<input type="button" class="display" name="btn4" id="btn4" value="4">
+		<input type="button" class="display" name="btn5" id="btn5" value="5">
+		<input type="button" class="display" name="btn6" id="btn6" value="6">
+		<input type="button" class="display" name="minus" id="minus" value="-">
+		</p>
+		<p>
+		<input type="button" class="display" name="btn7" id="btn7" value="7">
+		<input type="button" class="display" name="btn8" id="btn8" value="8">
+		<input type="button" class="display" name="btn9" id="btn9" value="9">
+		<input type="button" class="display" name="multiply" id="multiply" value="*">
+		</p>
+		<p>
+		<input type="button" class="display" name="clear" id="clear" value="C">
+		<input type="button" class="display" name="btn0" id="btn0" value="0">
+		<input type="button" class="display" name="equals" id="equals" value="=">
+		<input type="button" class="display" name="divide" id="divide" value="/">
+	</p>
+	</form>
+
+	<!--jQuery local file -->
+    <script src="/js/jquery.js"></script>
+
+    <script> 
+    "use strict"
+    var num1 = "";
+    var currentField = '#left';
+    var math = "";
+    var whole = "";
+    alert('Click the numbers to start your calculation!');
+    $(document).ready(function() {
+    	$('#btn1').click(function() {
+    		console.log(num1);
+    		num1 = num1 + '1';
+    		console.log(num1);
+    		$(currentField).val(num1);
+    	});
+    	$('#btn2').click(function() {
+    		num1 = num1 + '2';
+    		$(currentField).val(num1);
+    	});
+    	$('#btn3').click(function() {
+    		num1 = num1 + '3';
+    		$(currentField).val(num1);
+    	});
+    	$('#btn4').click(function() {
+    		num1 = num1 + '4';
+    		$(currentField).val(num1);
+    	});
+    	$('#btn5').click(function() {
+    		num1 = num1 + '5';
+    		$(currentField).val(num1);
+    	});
+    	$('#btn6').click(function() {
+    		num1 = num1 + '6';
+    		$(currentField).val(num1);
+    	});
+    	$('#btn7').click(function() {
+    		num1 = num1 + '7';
+    		$(currentField).val(num1);
+    	});
+    	$('#btn8').click(function() {
+    		num1 = num1 + '8';
+    		$(currentField).val(num1);
+    	});
+    	$('#btn9').click(function() {
+    		num1 = num1 + '9';
+    		$(currentField).val(num1);
+    	});
+    	$('#btn0').click(function() {
+    		num1 = num1 + '0';
+    		$(currentField).val(num1);
+    	});
+    	$('#plus').click(function() {
+    		math = '+';
+    		$('#middle').val(math);
+    		num1 = "";
+    	});
+    	$('#minus').click(function() {
+    		math = '-';
+    		$('#middle').val(math);
+    		num1 = "";
+    	});
+    	$('#multiply').click(function() {
+    		math = '*';
+    		$('#middle').val(math);
+    		num1 = "";
+    	});
+    	$('#divide').click(function() {
+    		math = '/';
+    		$('#middle').val(math);
+    		num1 = "";
+    	});
+    	$('.display').click(function() {
+    		console.log(num1);
+    		if (math !== '') {
+    			currentField = '#right';
+    			
+    		}
+    	});
+    	$('#equals').click(function() {
+    		var a = parseFloat($('#left').val());
+    		var b = parseFloat($('#right').val());
+    		if (math == '+') {
+    			whole = a + b;
+    			
+    		} else if (math == '-') {
+    			whole = a - b;
+    		} else if (math == '*') {
+    			whole = a * b;	
+    		} else if (math == '/') {
+    			whole = a / b;
+    		};
+    		$('#total').val(whole);
+    	});
+    	$('#clear').click(function() {
+    		$('.numfield').val("");
+    		currentField = '#left';
+    		math = "";
+    	});
+    });
+    </script>
 </body>
-</html>
+</html>  
