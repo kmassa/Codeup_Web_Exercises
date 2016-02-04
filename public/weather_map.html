@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" href="css/normalize.css">
+		<meta charset-"utf-8">
+    <title>weather map</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <style type="text/css">
+        #map-canvas {
+            width: 770px;
+            height: 481px;
+            margin: 10px;
+        }
+        .box {
+        	padding: 5px;
+        	border: 1px solid red;
+            margin: 5px;
+        }
+        .container {
+        	width: 800px;
+        	height: 700px;
+            padding: 10px;
+        	border: 1px solid black;
+        }
+        /*#two{
+        	position:relative;
+        	float:left;
+        }*/
+    </style>
+</head>
+<body>
+
+<h1>Weather Map</h1>
+
+<div class="container">
+
+<!-- <div id="result"> -->
+
+<!-- </div> -->
+ 
+	<div class="col-md-4 box" id="one"> </div>
+
+	<div class="col-md-4 box" id="two"> </div>
+
+	<div class="col md-4 box" id="three"> </div>
+
+	<div id="map-canvas"></div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4B8fgw3sLwbxVj5Q3_qo8oL9JXL1mrJ8"></script>
+
+<script>
+// function (){
+
+$.get("http://api.openweathermap.org/data/2.5/forecast?lat=29.4&lon=-98.5", {
+    APPID: "c73d4bdf8ccfca81b1f64d2de914f7a2",
+    lat:    29.423017,
+    lon:   -98.48527,
+    units: "imperial"
+}).done(function(data) {
+    console.log(data);
+
+   
+	var temp = $("#one").append(data.list[0].main.temp_max + "/" + data.list[0].main.temp_min);
+	
+
+    $("#one").append(data.list[0].main.temp_max + "/" + data.list[0].main.temp_min);
+    $("#one").append('<br>');
+    $("#one").append('Condition: ');
+    $("#one").append(data.list[0].weather[0].description);
+    $("#one").append('<br>');
+    $("#one").append('Humidity: ');
+    $("#one").append(data.list[0].main.humidity);
+    $("#one").append('<br>');
+    $("#one").append('wind: ');
+    $("#one").append(data.list[0].wind.speed);
+    $("#one").append('<br>');
+    $("#one").append('Pressure: ');
+    $("#one").append(data.list[0].main.pressure);
+    $("#one").append('<br>');
+	$("#two").append(data.list[9].main.temp_max + "/" + data.list[0].main.temp_min);
+    $("#two").append('<br>');
+    $("#two").append('Condition: ');
+    $("#two").append(data.list[9].weather[0].description);
+    $("#two").append('<br>');
+    $("#two").append('Humidity: ');
+    $("#two").append(data.list[9].main.humidity);
+    $("#two").append('<br>');
+    $("#two").append('wind: ');
+    $("#two").append(data.list[9].wind.speed);
+    $("#two").append('<br>');
+    $("#two").append('Pressure: ');
+    $("#two").append(data.list[9].main.pressure);
+    $("#three").append(data.list[17].main.temp_max + "/" + data.list[0].main.temp_min);
+    $("#three").append('<br>');
+    $("#three").append('Condition: ');
+    $("#three").append(data.list[17].weather[0].description);
+    $("#three").append('<br>');
+    $("#three").append('Humidity: ');
+    $("#three").append(data.list[17].main.humidity);
+    $("#three").append('<br>');
+    $("#three").append('wind: ');
+    $("#three").append(data.list[17].wind.speed);
+    $("#three").append('<br>');
+    $("#three").append('Pressure: ');
+    $("#three").append(data.list[17].main.pressure);	
+
+
+
+    
+ });
+var mapOptions = {
+            // Set the zoom level
+            zoom: 8,
+
+            // This sets the center of the map at our location
+            center: {
+                lat:  29.4284595,
+                lng: -98.492433
+            },
+            mapTypeId: google.maps.MapTypeId.HYBRID
+        }
+
+        // Render the map
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+// $.ajax("https://api.github.com/users/kmassa")
+// 	.done(function(data)
+// 	{
+// 		console.log(data)
+// 		var img = "<img src = '" +data.avatar_url+"'>"; 
+
+// 		$('#result').append(img);
+// 	})
+// 	.fail(function(){
+// 		console.log("failed");
+// 	});
+
+
+// })();
+</script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,46 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajax demo</title>
+</head>
+<body>
+
+<h1>Ajax Demo</h1>
+
+
+<div id="result">
+
+
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+// function (){
+
+
+$.ajax("https://api.github.com/users/kmassa")
+	.done(function(data)
+	{
+		console.log(data)
+		var img = "<img src = '" +data.avatar_url+"'>"; 
+
+		$('#result').append(img);
+	})
+	.fail(function(){
+		console.log("failed");
+	});
+
+
+// })();
+</script>
+
+</body>
+</html>
+
+
+weather api key   c73d4bdf8ccfca81b1f64d2de914f7a2
