@@ -40,14 +40,26 @@
 <!-- <div id="result"> -->
 
 <!-- </div> -->
+
  
-	<div class="col-md-4 box" id="one"> </div>
+    <div class="col-md-4 col-sm-3 box" id="one"> </div>
 
-	<div class="col-md-4 box" id="two"> </div>
+    <div class="col-md-4 col-sm-3 box" id="two"> </div>
 
-	<div class="col md-4 box" id="three"> </div>
+    <div class="col md-4 col-sm-3 box" id="three"> </div>
 
-	<div id="map-canvas"></div>
+    <div class="fields">
+        <label for="lat"></label>
+            <input type="text" name="left" class="numfield" id="inputLat" placeholder="latitude">
+        
+        <label for="long"></label>    
+            <input type="text" name="middle" class="numfield" id="inputLong"placeholder="longitude">
+
+        <input type="button" class="calculate" name="btn1" id="btn1" value="calculate">
+    </div>
+
+    <div id="map-canvas"></div>
+
 
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -57,63 +69,101 @@
 <script>
 // function (){
 
-$.get("http://api.openweathermap.org/data/2.5/forecast?lat=29.4&lon=-98.5", {
-    APPID: "c73d4bdf8ccfca81b1f64d2de914f7a2",
-    lat:    29.423017,
-    lon:   -98.48527,
-    units: "imperial"
-}).done(function(data) {
-    console.log(data);
+
+// $(#panel_button).on('click')function(){
+
+
+
+
+    // $.get("http://api.openweathermap.org/data/2.5/forecast/daily?",{
+    //     APPID: "c73d4bdf8ccfca81b1f64d2de914f7a2",
+    //     "q": "san antonio, Tx"
+    // }).done(function(data){
+    // //     console.log(data);
+    //     var iconName = data.list[0].weather[0].icon;
+    //     var iconUrl = "http://openweathermap.org/img/w/" + iconName + ".png";
+    // //     $('#one').append(data.list[0].main.temp_max +
+    //         "/" + main.temp_min + "<br>" + weather[condition] + "<br>");
+
+    //     // weather[0].)
+    // });
+   
+// data.list.forEach(function(day){
+
+// list 0
+// list 1
+// list 2
+
+    
+// });
+
+// var storLat = ""
+// var storLong = ""
+
+$(document).ready(function() {
+        $('#btn1').click(function() {
+            var userLat = $('#inputLat').val();
+            var userLng = $('#inputLong').val();
+            console.log(userLat);
+            console.log(userLng);
+        })
+
+    $.get("http://api.openweathermap.org/data/2.5/forecast/daily?", {
+        APPID: "c73d4bdf8ccfca81b1f64d2de914f7a2",
+        lat:    29.423017,
+        lon:   -98.48527,
+        units: "imperial"
+    }).done(function(data) {
+        console.log(data);
 
    
-	var temp = $("#one").append(data.list[0].main.temp_max + "/" + data.list[0].main.temp_min);
+	// var temp = $("#one").append(data.list[0].main.temp_max + "/" + data.list[0].main.temp_min);
 	
 
-    $("#one").append(data.list[0].main.temp_max + "/" + data.list[0].main.temp_min);
+
+    $("#one").append(data.list[0].temp.max + "/" + data.list[0].temp.min);
     $("#one").append('<br>');
     $("#one").append('Condition: ');
     $("#one").append(data.list[0].weather[0].description);
     $("#one").append('<br>');
     $("#one").append('Humidity: ');
-    $("#one").append(data.list[0].main.humidity);
+    $("#one").append(data.list[0].humidity);
     $("#one").append('<br>');
     $("#one").append('wind: ');
-    $("#one").append(data.list[0].wind.speed);
+    $("#one").append(data.list[0].speed);
     $("#one").append('<br>');
     $("#one").append('Pressure: ');
-    $("#one").append(data.list[0].main.pressure);
+    $("#one").append(data.list[0].pressure);
     $("#one").append('<br>');
-	$("#two").append(data.list[9].main.temp_max + "/" + data.list[0].main.temp_min);
+	$("#two").append(data.list[1].temp.max + "/" + data.list[1].temp.min);
     $("#two").append('<br>');
     $("#two").append('Condition: ');
-    $("#two").append(data.list[9].weather[0].description);
+    $("#two").append(data.list[1].weather[0].description);
     $("#two").append('<br>');
     $("#two").append('Humidity: ');
-    $("#two").append(data.list[9].main.humidity);
+    $("#two").append(data.list[1].humidity);
     $("#two").append('<br>');
     $("#two").append('wind: ');
-    $("#two").append(data.list[9].wind.speed);
+    $("#two").append(data.list[1].speed);
     $("#two").append('<br>');
     $("#two").append('Pressure: ');
-    $("#two").append(data.list[9].main.pressure);
-    $("#three").append(data.list[17].main.temp_max + "/" + data.list[0].main.temp_min);
+    $("#two").append(data.list[1].pressure);
+    $("#three").append(data.list[2].temp.max + "/" + data.list[2].temp.min);
     $("#three").append('<br>');
     $("#three").append('Condition: ');
-    $("#three").append(data.list[17].weather[0].description);
+    $("#three").append(data.list[2].weather[0].description);
     $("#three").append('<br>');
     $("#three").append('Humidity: ');
-    $("#three").append(data.list[17].main.humidity);
+    $("#three").append(data.list[2].humidity);
     $("#three").append('<br>');
     $("#three").append('wind: ');
-    $("#three").append(data.list[17].wind.speed);
+    $("#three").append(data.list[2].speed);
     $("#three").append('<br>');
     $("#three").append('Pressure: ');
-    $("#three").append(data.list[17].main.pressure);	
-
-
-
+    $("#three").append(data.list[2].pressure);	
     
- });
+    });
+// });
 var mapOptions = {
             // Set the zoom level
             zoom: 8,
@@ -139,7 +189,7 @@ var mapOptions = {
 // 	})
 // 	.fail(function(){
 // 		console.log("failed");
-// 	});
+	});
 
 
 // })();
