@@ -15,40 +15,24 @@
     </style>
 </head>
 <body>
-
-    <h1 id="nat-parks">National Parks</h1>
-
-    <h3 class="parks"> FAQ about National Parks</h3>
-
-    
-    <dl class="questions">
-        <li>The first list item.</li>
-        <li>The second list item.</li>
-        <li>The third list item.</li>
-        <li>The fourth list item.</li>
-        <li>The fifth list item.</li>
-        <li>The sixth list item.</li>
-        <li>The seventh list item.</li>
-        <li>The eighth list item.</li>
-        <li>The nineth list item.</li>
-        <li>The tenth list item.</li>
-    </dl>
-
-    <h3 class="parks"> FAQ about National Parks</h3>
-
-    
-    <dl class="questions">
-        <li>The first list item.</li>
-        <li>The second list item.</li>
-        <li>The third list item.</li>
-        <li>The fourth list item.</li>
-        <li>The fifth list item.</li>
-        <li>The sixth list item.</li>
-        <li>The seventh list item.</li>
-        <li>The eighth list item.</li>
-        <li>The nineth list item.</li>
-        <li>The tenth list item.</li>
-    </dl>
+    <h1>Parks List</h1>
+    <h3 id="national-parks-toggle">National Parks</h3>
+    <ul id="national-parks">
+        <li>Arches</li>
+        <li>Badlands</li>
+        <li>Carlsbad Caverns</li>
+        <li>Denali</li>
+        <li>Everglades</li>
+    </ul>
+    <h3 id="state-parks-texas-toggle">State Parks of Texas</h3>
+    <ul id="state-parks-texas">
+        <li>Abilene</li>
+        <li>Big Bend</li>
+        <li>Choke Canyon</li>
+        <li>Davis Mountains</li>
+        <li>Enchanted Rock</li>
+    </ul>
+<!-- </body> -->
 <!-- <a href="#" id="important">Click to toggle </a> -->
 
 
@@ -74,12 +58,18 @@ $(document).ready(function() {
     //     // $(this).addClass('invisible');
     // });
 
-    $('ul').each(function() {
-             $(this).children().first().css('font-weight', 'bold'); 
+    // 
+
+    $(document).ready(function() {
+            $('#national-parks-toggle').click(function() {
+                $('#national-parks').slideToggle();
             });
-        $('li').click(function() {
-            $(this).parent().addClass('invisible');
+
+            $('#state-parks-texas-toggle').click(function() {
+                $('#state-parks-texas').slideToggle();
+            });
         });
+
     
 // //get input form first box
 
