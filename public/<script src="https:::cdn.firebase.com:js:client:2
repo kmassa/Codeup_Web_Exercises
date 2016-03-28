@@ -1,0 +1,76 @@
+	<script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+	
+/////update item on Firebase
+
+     fireDB.child("todo").on("value", function(snapshot){
+    	console.table(snapshot.val());
+
+    	$("#item-list").html(" ");
+
+	snapshot.forEach(function(){
+		console.log(data.val());
+
+		addItemToList(data);
+
+	});
+});
+
+///add item to firebase
+
+
+$(document).ready(function(){
+	$("#new-item-form").submit (function(e){
+
+	})
+
+	fireDB.child("toto-items").push(item);
+
+	this.reset();
+})
+
+
+///////remove items
+
+
+$("item-list").on("click", "del-btn",function(){
+	var id = $(this).data("id");
+
+	console.log(id);
+
+	fireDB("todo-items").child(id).remove();
+
+	////also 
+	fireDB("todo-items/" + id).remove();
+
+});
+
+
+
+
+
+var addItemToList = function(item){
+	var $li = $ ("<li>").addClass("container-fluid").text(item.val().content + " ");
+	var $delBtn = $("<button>").text ("delete").data("id",item.key());
+	$delBtn.addClass("btn btn-xs btn danger del-dtn");
+
+	switch (item.val().priority) {
+	case 1
+	case "1";
+		$li.addClass('lowest'):
+		break;
+		case 2
+	case "2";
+		$li.addClass('low'):
+		break;
+	}
+}
+
+
+
+var content = $
+
+
+
+
+
+	var fireDB = new fireBase("https://balboa-sample-app-1.firebaseio.com/")
